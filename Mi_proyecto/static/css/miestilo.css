@@ -1,0 +1,265 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0A192F;
+    color: #ffffff;
+    margin: 0;
+    padding: 100;
+    text-align: center;
+}
+
+/* Layout Structure */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #112240;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo-acreditacion img {
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.logo-acreditacion img:hover {
+    transform: scale(1.05);
+}
+
+.direccion-cis img {
+    height: 60px;
+    border-radius: 5px;
+    border: 2px solid #64ffda;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #1e3a5f;
+    color: #64ffda;
+}
+
+/* Main Content */
+main {
+    min-height: calc(100vh - 200px);
+    padding: 30px 0;
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: #64ffda;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Sections */
+section {
+    background-color: #112240;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 25px auto;
+    max-width: 800px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Buttons */
+button, 
+input[type="submit"], 
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover, 
+input[type="submit"]:hover, 
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(255,255,255,0.3);
+}
+
+button::before, 
+input[type="submit"]::before, 
+.button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255,255,255,0.2);
+    transition: all 0.4s ease-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button:hover::before, 
+input[type="submit"]:hover::before, 
+.button:hover::before {
+    width: 0;
+    height: 0;
+}
+
+/* Forms */
+form {
+    background: #112240;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    color: #64ffda;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1e3a5f;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+input:focus, 
+textarea:focus {
+    outline: 2px solid #64ffda;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input::placeholder, 
+textarea::placeholder {
+    color: #b0c4de;
+}
+
+/* Links */
+a {
+    color: #64ffda;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #112240;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #b0c4de;
+    margin: 0;
+}
+
+/* Image Styles */
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .logo-acreditacion img, 
+    .direccion-cis img {
+        height: auto;
+        max-width: 100%;
+    }
+    
+    section, form {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    button, 
+    input[type="submit"], 
+    .button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+}

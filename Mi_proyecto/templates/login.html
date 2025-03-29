@@ -1,40 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="{% url "about" %}">About</a></li>
-                <li><a href="{% url "contact" %}">Contact</a></li>
-                <li><a href="{% url "login" %}">login</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Login</h2>
-        <form method="post">
-            {% csrf_token %}
-            <div>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Login</button>
-        </form>
-        <p>Don't have an account? <a href="#">Register</a></p>
-        <p>Don't have an account? <a href="#">sistema de usuario</a></p>
-    </main>
-    <footer>
-        <p>Todos los derechos reservados &copy; 2025</p>
-    </footer>
-</body>
-</html>
+{% extends 'base.html' %}
+
+
+{% block title %}
+<title>Login</title>
+{% endblock title %}
+    
+
+{% block content %}
+</h1>Login</h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required class="form-control">
+    </div>
+    <button type="submit">Login</button>
+</form>
+<p>Don't have an account? <a href="#">Register</a></p>
+<p>Don't have an account? <a href="#">sistema de usuario</a></p>
+{% endblock content %}
+    
+
+{% block footer %}
+    <p>Todos los derechos reservados &copy; 2025</p>
+{% endblock footer %}

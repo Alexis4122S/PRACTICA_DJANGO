@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/miestilo.css' %}">
+    {% block title %}
+    {% endblock title %}
+</head>
+<body>
+    <header>
+        {% include "nav.html" %}
+    </header>
+    <main>
+        
+        {% block content %}
+            
+        {% endblock content %}
+        <div class="header-container">
+            <div class="logo-acreditacion">
+                <img src="{% static 'img/logo-CIS_acreditación.png' %}" alt="Carrera Acreditada">
+                <img src="{% static 'img/Dirección.jpg' %}" alt="Dirección CIS">
+            </div>            
+        </div>
+    </main>
+    <footer>
+        
+        {% block footer %}
+            
+        {% endblock footer %}
+            
+    </footer>
+</body>
+</html>
